@@ -16,7 +16,7 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="flex flex-col items-center px-4 py-24 min-h-[100vh]"
+      className="flex flex-col items-center px-4 py-16 min-h-[100vh]"
       data-aos="fade-up"
     >
       <h1 className="text-3xl md:text-4xl antialiased">Our Services</h1>

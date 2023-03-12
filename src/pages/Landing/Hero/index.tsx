@@ -4,6 +4,7 @@ import ArrowDownIcon from "../../../components/Icons/ArrowDownIcon";
 const Hero = () => {
   return (
     <section
+    id="hero"
       className="h-[100vh] w-full flex flex-col justify-center items-center"
       style={{
         background: `linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${BgHero})`,
