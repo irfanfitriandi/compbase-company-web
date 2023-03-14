@@ -1,3 +1,4 @@
+import { FloatButton } from "antd";
 import React from "react";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
@@ -8,11 +9,12 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <div>
+    <>
       <Navbar />
       <main>{children}</main>
       <Footer />
-    </div>
+      <FloatButton.BackTop />
+    </>
   );
 };
 

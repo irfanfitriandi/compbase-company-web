@@ -1,7 +1,8 @@
-import { FloatButton } from "antd";
 import Layout from "../../components/Layout";
 import Clients from "./Clients";
+import GetInTouch from "./GetInTouch";
 import Hero from "./Hero";
+import Product from "./Product";
 import Services from "./Services";
 
 const index = () => {
@@ -10,7 +11,8 @@ const index = () => {
       <Hero />
       <Services />
       <Clients />
-      <FloatButton.BackTop />
+      <Product />
+      <GetInTouch />
     </Layout>
   );
 };

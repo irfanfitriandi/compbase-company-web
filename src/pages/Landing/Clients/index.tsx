@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import AOS from "aos";
 import { useDispatch, useSelector } from "react-redux";
 
-import "aos/dist/aos.css";
 import img from "../../../assets/profile.jpg";
 import ClientCard from "../../../components/ClientCard";
 import { ClientsTypes } from "../../../shared/types/clients";
@@ -16,12 +14,6 @@ const Clients = () => {
   const savedClient = useSelector((state: RootState) => state.data.bookmarks);
 
   useEffect(() => {
-    AOS.init({
-      offset: 200,
-      duration: 800,
-      easing: "ease-in-sine",
-      delay: 100,
-    });
     fetchData();
   }, []);
 

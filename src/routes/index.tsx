@@ -2,7 +2,8 @@ import { lazy, Suspense, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setBookmarks } from "../shared/utils/ReduxReducer";
-import { Spin } from "antd";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const LandingPage = lazy(() => import("../pages/Landing"));
 const NotFoundPage = lazy(() => import("../pages/NotFound"));
@@ -17,6 +18,14 @@ const App = () => {
     if (getSavedClient) {
       dispatch(setBookmarks(JSON.parse(getSavedClient)));
     }
+  }, []);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 650,
+      easing: "ease-out-sine",
+      delay: 100,
+    });
   }, []);
 
   return (

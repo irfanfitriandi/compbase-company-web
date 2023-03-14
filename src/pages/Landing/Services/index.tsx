@@ -1,18 +1,6 @@
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
 import ReactIcon from "../../../components/Icons/ReactIcon";
 
 const Services = () => {
-  useEffect(() => {
-    AOS.init({
-      offset: 200,
-      duration: 800,
-      easing: "ease-in-sine",
-      delay: 300,
-    });
-  }, []);
-
   return (
     <section
       id="services"

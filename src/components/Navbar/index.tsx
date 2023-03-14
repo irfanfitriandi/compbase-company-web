@@ -51,12 +51,14 @@ const Navbar = () => {
         />
       </Link>
       <div>
-        <Dropdown menu={{ items }} trigger={["click"]}>
-          <MenuIcon
-            primary={path === "/" ? "#FFFFFF" : "#FF1F57"}
-            className="w-10 md:w-12 cursor-pointer"
-          />
-        </Dropdown>
+        {path === "/" && (
+          <Dropdown menu={{ items }} trigger={["click"]}>
+            <MenuIcon
+              primary="#FFFFFF"
+              className="w-10 md:w-12 cursor-pointer"
+            />
+          </Dropdown>
+        )}
       </div>
     </nav>
   );
