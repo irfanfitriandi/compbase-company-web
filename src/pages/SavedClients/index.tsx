@@ -1,18 +1,18 @@
 import { useSelector, useDispatch } from "react-redux";
 
-import Layout from "../../components/Layout";
-import ClientCard from "../../components/ClientCard";
+import Layout from "components/Layout";
+import ClientCard from "components/ClientCard";
 
-import { ClientsTypes } from "../../shared/types/clients";
-import { RootState } from "../../shared/types/redux";
-import { setBookmarks } from "../../shared/utils/ReduxReducer";
+import { ClientsTypes } from "shared/types/clients";
+import { RootState } from "shared/types/redux";
+import { setBookmarks } from "shared/utils/ReduxReducer";
 
-const SavedClients = () => {
+function SavedClients() {
   const dispatch = useDispatch();
   const savedClient = useSelector((state: RootState) => state.data.bookmarks);
 
   const handleRemove = (data: ClientsTypes) => {
-    let dupesavedClient: ClientsTypes[] = savedClient.slice();
+    const dupesavedClient: ClientsTypes[] = savedClient.slice();
     const filterData = dupesavedClient.filter((item) => item.id !== data.id);
     localStorage.setItem("SavedClient", JSON.stringify(filterData));
     dispatch(setBookmarks(filterData));
@@ -35,7 +35,7 @@ const SavedClients = () => {
               name={data.name}
               compname={data.company.name}
               img={data.image.img}
-              color={`#FF1F57`}
+              color="#FF1F57"
               onClickBookmark={() => handleRemove(data)}
             />
           ))}
@@ -43,6 +43,6 @@ const SavedClients = () => {
       </section>
     </Layout>
   );
-};
+}
 
 export default SavedClients;

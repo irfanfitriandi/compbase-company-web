@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { ClientsTypes } from "../../types/clients";
+import { ClientsTypes } from "shared/types/clients";
 
 interface StateType {
   bookmarks: ClientsTypes[];
@@ -11,7 +11,7 @@ const initialState: StateType = {
 
 const sliceState = createSlice({
   name: "state",
-  initialState: initialState,
+  initialState,
   reducers: {
     setBookmarks: (state, action) => {
       state.bookmarks = action.payload;

@@ -1,4 +1,4 @@
-import Layout from "../../components/Layout";
+import Layout from "components/Layout";
 import Clients from "./Clients";
 import GetInTouch from "./GetInTouch";
 import Hero from "./Hero";

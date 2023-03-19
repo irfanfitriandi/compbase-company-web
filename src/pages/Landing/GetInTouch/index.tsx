@@ -1,7 +1,7 @@
-import FormUs from "../../../components/Form";
-import map from "../../../assets/map.jpg";
+import FormUs from "components/Form";
+import map from "assets/map.jpg";
 
-const GetInTouch = () => {
+function GetInTouch() {
   return (
     <section
       id="product"
@@ -21,6 +21,6 @@ const GetInTouch = () => {
       </div>
     </section>
   );
-};
+}
 
 export default GetInTouch;

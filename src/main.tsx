@@ -7,6 +7,6 @@ import store from "./shared/utils/ReduxStore";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <Provider store={store}>
-      <App />
+    <App />
   </Provider>
 );

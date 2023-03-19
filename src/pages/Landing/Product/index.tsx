@@ -1,6 +1,6 @@
-import CarouselProduct from "../../../components/Carousel";
+import CarouselProduct from "components/Carousel";
 
-const Product = () => {
+function Product() {
   return (
     <section
       id="product"
@@ -14,6 +14,6 @@ const Product = () => {
       <CarouselProduct />
     </section>
   );
-};
+}
 
 export default Product;

@@ -1,7 +1,7 @@
 import React from "react";
 import { IconProps } from "../IconProps";
 
-const LogoIcon = ({ primary, secondary, ...props }: IconProps) => {
+function LogoIcon({ primary, secondary, ...props }: IconProps) {
   return (
     <svg
       viewBox="0 0 441 140"
@@ -23,6 +23,6 @@ const LogoIcon = ({ primary, secondary, ...props }: IconProps) => {
       />
     </svg>
   );
-};
+}
 
 export default LogoIcon;

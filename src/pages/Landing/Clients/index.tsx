@@ -2,13 +2,13 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 
-import img from "../../../assets/profile.jpg";
-import ClientCard from "../../../components/ClientCard";
-import { ClientsTypes } from "../../../shared/types/clients";
-import { setBookmarks } from "../../../shared/utils/ReduxReducer";
-import { RootState } from "../../../shared/types/redux";
+import img from "assets/profile.jpg";
+import ClientCard from "components/ClientCard";
+import { ClientsTypes } from "shared/types/clients";
+import { setBookmarks } from "shared/utils/ReduxReducer";
+import { RootState } from "shared/types/redux";
 
-const Clients = () => {
+function Clients() {
   const dispatch = useDispatch();
   const [clients, setClients] = useState<ClientsTypes[]>([]);
   const savedClient = useSelector((state: RootState) => state.data.bookmarks);
@@ -27,9 +27,9 @@ const Clients = () => {
     const checkExist = localStorage.getItem("SavedClient");
 
     if (checkExist) {
-      let parseClient: ClientsTypes[] = JSON.parse(checkExist);
-      let exist = parseClient.filter((item) => item.id === data.id);
-      let inExist = exist[0];
+      const parseClient: ClientsTypes[] = JSON.parse(checkExist);
+      const exist = parseClient.filter((item) => item.id === data.id);
+      const inExist = exist[0];
 
       if (inExist !== undefined) {
         alert("Failed: Movie already added in saved clients!");
@@ -78,6 +78,6 @@ const Clients = () => {
       </div>
     </section>
   );
-};
+}
 
 export default Clients;

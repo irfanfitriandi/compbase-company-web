@@ -1,6 +1,6 @@
 import { IconProps } from "../IconProps";
 
-const ReactIcon = ({ ...props }: IconProps) => {
+function ReactIcon({ ...props }: IconProps) {
   return (
     <svg
       viewBox="0 0 100 90"
@@ -14,6 +14,6 @@ const ReactIcon = ({ ...props }: IconProps) => {
       />
     </svg>
   );
-};
+}
 
 export default ReactIcon;

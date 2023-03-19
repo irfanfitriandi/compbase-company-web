@@ -1,6 +1,6 @@
 import { IconProps } from "../IconProps";
 
-const BookmarkIcon = ({ secondary, ...props }: IconProps) => {
+function BookmarkIcon({ secondary, ...props }: IconProps) {
   return (
     <svg
       viewBox="0 0 100 129"
@@ -15,6 +15,6 @@ const BookmarkIcon = ({ secondary, ...props }: IconProps) => {
       />
     </svg>
   );
-};
+}
 
 export default BookmarkIcon;

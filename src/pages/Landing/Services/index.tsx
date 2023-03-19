@@ -1,6 +1,6 @@
-import ReactIcon from "../../../components/Icons/ReactIcon";
+import ReactIcon from "components/Icons/ReactIcon";
 
-const Services = () => {
+function Services() {
   return (
     <section
       id="services"
@@ -51,6 +51,6 @@ const Services = () => {
       </div>
     </section>
   );
-};
+}
 
 export default Services;

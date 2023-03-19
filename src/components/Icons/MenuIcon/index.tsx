@@ -1,6 +1,6 @@
 import { IconProps } from "../IconProps";
 
-const MenuIcon = ({ primary, ...props }: IconProps) => {
+function MenuIcon({ primary, ...props }: IconProps) {
   return (
     <svg
       viewBox="0 0 100 100"
@@ -17,6 +17,6 @@ const MenuIcon = ({ primary, ...props }: IconProps) => {
       />
     </svg>
   );
-};
+}
 
 export default MenuIcon;

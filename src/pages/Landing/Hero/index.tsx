@@ -1,10 +1,10 @@
-import BgHero from "../../../assets/bg.jpg";
-import ArrowDownIcon from "../../../components/Icons/ArrowDownIcon";
+import BgHero from "assets/bg.jpg";
+import ArrowDownIcon from "components/Icons/ArrowDownIcon";
 
-const Hero = () => {
+function Hero() {
   return (
     <section
-    id="hero"
+      id="hero"
       className="h-[100vh] w-full flex flex-col justify-center items-center"
       style={{
         background: `linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${BgHero})`,
@@ -22,6 +22,6 @@ const Hero = () => {
       </a>
     </section>
   );
-};
+}
 
 export default Hero;

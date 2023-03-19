@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import LogoIcon from "../Icons/LogoIcon";
 import MenuIcon from "../Icons/MenuIcon";
 
-const Navbar = () => {
+function Navbar() {
   const items = [
     {
       label: (
@@ -23,7 +23,7 @@ const Navbar = () => {
     },
     {
       label: (
-        <Link to={`/saved-clients`}>
+        <Link to="/saved-clients">
           <h1 className="font-medium p-1">Saved Clients</h1>
         </Link>
       ),
@@ -43,7 +43,7 @@ const Navbar = () => {
 
   return (
     <nav className="flex justify-between items-center absolute top-0 h-24 w-full text-gray-100 px-4 md:px-8">
-      <Link to={`/`}>
+      <Link to="/">
         <LogoIcon
           primary={path === "/" ? "#FFFFFF" : "#FF1F57"}
           secondary={path === "/" ? "#B6B6B6" : "#CC1946"}
@@ -62,6 +62,6 @@ const Navbar = () => {
       </div>
     </nav>
   );
-};
+}
 
 export default Navbar;

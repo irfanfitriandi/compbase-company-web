@@ -1,8 +1,8 @@
 import React from "react";
-import { Card, Divider } from "antd";
+import { Card } from "antd";
+import { useNavigate } from "react-router-dom";
 import BookmarkIcon from "../Icons/BookmarkIcon";
 import ArrowRightIcon from "../Icons/ArrowRightIcon";
-import { useNavigate } from "react-router-dom";
 
 const { Meta } = Card;
 

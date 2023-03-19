@@ -1,6 +1,6 @@
 import React from "react";
 import { Carousel } from "antd";
-import soon from "../../assets/soon.jpg";
+import soon from "assets/soon.jpg";
 
 const CarouselProduct: React.FC = () => (
   <div
@@ -16,7 +16,7 @@ const CarouselProduct: React.FC = () => (
           <h3 className="text-center font-semibold tracking-tight text-2xl text-[#FF1F57] pb-6">
             --Coming Soon--
           </h3>
-          <div className="w-36 h-7 bg-gray-300 mx-auto rounded-2xl"></div>
+          <div className="w-36 h-7 bg-gray-300 mx-auto rounded-2xl" />
         </div>
       ))}
     </Carousel>

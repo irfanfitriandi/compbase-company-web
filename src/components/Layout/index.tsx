@@ -7,7 +7,7 @@ interface LayoutProps {
   children: React.ReactNode;
 }
 
-const Layout = ({ children }: LayoutProps) => {
+function Layout({ children }: LayoutProps) {
   return (
     <>
       <Navbar />
@@ -16,6 +16,6 @@ const Layout = ({ children }: LayoutProps) => {
       <FloatButton.BackTop />
     </>
   );
-};
+}
 
 export default Layout;

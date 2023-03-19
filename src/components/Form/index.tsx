@@ -1,7 +1,7 @@
 import { Button, Form, Input, Select } from "antd";
 import TextArea from "antd/es/input/TextArea";
 
-const FormUs = () => {
+function FormUs() {
   return (
     <div className="w-full px-4 py-16 bg-white rounded-r-lg">
       <Form
@@ -38,6 +38,6 @@ const FormUs = () => {
       </Form>
     </div>
   );
-};
+}
 
 export default FormUs;

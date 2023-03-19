@@ -1,16 +1,16 @@
 import { lazy, Suspense, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { setBookmarks } from "../shared/utils/ReduxReducer";
 import AOS from "aos";
+import { setBookmarks } from "shared/utils/ReduxReducer";
 import "aos/dist/aos.css";
 
-const LandingPage = lazy(() => import("../pages/Landing"));
-const NotFoundPage = lazy(() => import("../pages/NotFound"));
-const SavedClientsPage = lazy(() => import("../pages/SavedClients"));
-const DetailClientPage = lazy(() => import("../pages/DetailClient"));
+const LandingPage = lazy(() => import("pages/Landing"));
+const NotFoundPage = lazy(() => import("pages/NotFound"));
+const SavedClientsPage = lazy(() => import("pages/SavedClients"));
+const DetailClientPage = lazy(() => import("pages/DetailClient"));
 
-const App = () => {
+function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -40,6 +40,6 @@ const App = () => {
       </Router>
     </Suspense>
   );
-};
+}
 
 export default App;
